@@ -1,0 +1,1185 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Professional profile, appointments, publications and reviewing work of Dr Chan Kwok Wai Keith.">
+  <meta name="theme-color" content="#142842">
+  <title>Dr Chan Kwok Wai Keith | Professional Profile</title>
+
+  <style>
+    :root {
+      --navy: #142842;
+      --navy-deep: #0c1c31;
+      --ink: #243347;
+      --muted: #637186;
+      --paper: #f5f7f8;
+      --teal: #087b83;
+      --teal-light: #e3f3f2;
+      --gold: #c9a466;
+      --line: #dce3e8;
+      --shadow: 0 12px 35px rgba(16, 38, 59, .07);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--paper);
+      font: 16px/1.65 system-ui, -apple-system, BlinkMacSystemFont,
+            "Segoe UI", sans-serif;
+    }
+
+    img { display: block; max-width: 100%; }
+    a { color: var(--teal); }
+    a:hover { text-decoration-thickness: 2px; }
+    :focus-visible { outline: 3px solid var(--gold); outline-offset: 3px; }
+    section[id], article[id] { scroll-margin-top: 105px; }
+
+    .container {
+      width: min(1160px, calc(100% - 40px));
+      margin-inline: auto;
+    }
+
+    .skip-link {
+      position: absolute;
+      left: 12px;
+      top: -70px;
+      z-index: 100;
+      padding: 10px 16px;
+      background: white;
+      color: var(--navy);
+    }
+    .skip-link:focus { top: 12px; }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: rgba(12, 28, 49, .97);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(255,255,255,.12);
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      min-height: 72px;
+    }
+
+    .site-name {
+      color: white;
+      text-decoration: none;
+      font-weight: 750;
+      letter-spacing: -.02em;
+      white-space: nowrap;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 9px 19px;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .nav-links a {
+      color: #d9e4ea;
+      text-decoration: none;
+      font-size: .88rem;
+    }
+
+    .nav-links a:hover {
+      color: white;
+      text-decoration: underline;
+    }
+
+    .hero {
+      color: white;
+      background:
+        radial-gradient(
+          circle at 80% 12%,
+          rgba(31, 166, 167, .22),
+          transparent 34%
+        ),
+        linear-gradient(
+          125deg,
+          var(--navy-deep),
+          #1b3a54 65%,
+          #174c58
+        );
+    }
+
+    .hero-inner {
+      display: grid;
+      grid-template-columns: minmax(0, 1.4fr) minmax(250px, .7fr);
+      align-items: center;
+      gap: 50px;
+      min-height: 570px;
+      padding-block: 72px;
+    }
+
+    .eyebrow {
+      margin: 0 0 12px;
+      color: var(--teal);
+      text-transform: uppercase;
+      letter-spacing: .17em;
+      font-size: .76rem;
+      font-weight: 800;
+    }
+
+    .hero .eyebrow { color: #a9e1dd; }
+    h1, h2, h3 { line-height: 1.2; }
+
+    h1 {
+      margin: 0 0 15px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(2.7rem, 5.3vw, 5rem);
+      font-weight: 600;
+      letter-spacing: -.035em;
+    }
+
+    .hero-subtitle {
+      max-width: 670px;
+      margin: 0 0 22px;
+      color: #d9e7eb;
+      font-size: clamp(1.08rem, 2vw, 1.3rem);
+    }
+
+    .hero-credentials {
+      max-width: 680px;
+      margin: 0 0 18px;
+      color: #e4edf0;
+      font-size: .96rem;
+    }
+
+    .hero-roles {
+      max-width: 690px;
+      margin: 0 0 26px;
+      color: #bfd4db;
+      font-size: .9rem;
+    }
+
+    .hero-photo {
+      width: min(100%, 340px);
+      aspect-ratio: 4 / 5;
+      justify-self: end;
+      object-fit: cover;
+      object-position: center top;
+      border-radius: 170px 170px 24px 24px;
+      border: 6px solid rgba(255,255,255,.14);
+      box-shadow: 0 25px 60px rgba(0,0,0,.25);
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 46px;
+      padding: 11px 19px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 700;
+      background: var(--gold);
+      color: var(--navy-deep);
+    }
+
+    .button:hover { background: #e0bc7f; }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .button-outline {
+      background: transparent;
+      color: white;
+      border: 1px solid rgba(255,255,255,.55);
+    }
+
+    .button-outline:hover {
+      background: rgba(255,255,255,.12);
+      color: white;
+    }
+
+    .section { padding-block: 76px; }
+    .section-white { background: white; }
+
+    .section-heading {
+      max-width: 810px;
+      margin-bottom: 32px;
+    }
+
+    .section-heading h2 {
+      margin: 0 0 10px;
+      color: var(--navy);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(2rem, 3.5vw, 2.8rem);
+      font-weight: 600;
+    }
+
+    .section-heading > p:last-child {
+      margin-bottom: 0;
+      color: var(--muted);
+    }
+
+    .intro-grid {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr;
+      gap: 42px;
+    }
+
+    .intro-grid p:first-child { margin-top: 0; }
+
+    .fact-box {
+      padding: 27px;
+      background: var(--teal-light);
+      border-radius: 14px;
+      border-left: 4px solid var(--teal);
+    }
+
+    .fact-box h3 {
+      margin: 0 0 12px;
+      color: var(--navy);
+    }
+
+    .fact-box ul {
+      margin: 0;
+      padding-left: 20px;
+    }
+
+    .profile-stack {
+      display: grid;
+      gap: 24px;
+    }
+
+    .profile-panel {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 190px;
+      gap: 30px;
+      align-items: start;
+      padding: 30px;
+      background: white;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      box-shadow: var(--shadow);
+    }
+
+    .profile-panel h3 {
+      color: var(--navy);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(1.5rem, 2.5vw, 2rem);
+      margin: 0 0 14px;
+    }
+
+    .profile-panel h4 {
+      color: var(--navy);
+      margin: 23px 0 8px;
+    }
+
+    .profile-panel p { margin: 0 0 13px; }
+    .profile-panel ul { margin: 0 0 14px; padding-left: 22px; }
+    .profile-panel li + li { margin-top: 5px; }
+
+    .profile-image {
+      width: 100%;
+      max-height: 210px;
+      object-fit: contain;
+      padding: 12px;
+      background: #f8fafb;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+    }
+
+    .profile-caption {
+      margin: 9px 0 0 !important;
+      color: var(--muted);
+      font-size: .79rem;
+      text-align: center;
+    }
+
+    .timeline {
+      display: grid;
+      max-width: 1020px;
+    }
+
+    .timeline-item {
+      display: grid;
+      grid-template-columns: 155px 1fr;
+      gap: 22px;
+      position: relative;
+      border-left: 2px solid #b8d9d8;
+      padding: 0 0 25px 25px;
+    }
+
+    .timeline-item::before {
+      content: "";
+      position: absolute;
+      left: -7px;
+      top: 5px;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: var(--teal);
+    }
+
+    .timeline-item:last-child { padding-bottom: 0; }
+    .timeline-year { color: var(--teal); font-weight: 750; font-size: .91rem; }
+    .timeline-item h3 { margin: 0 0 4px; color: var(--navy); font-size: 1rem; }
+    .timeline-item p { margin: 0; color: var(--muted); font-size: .92rem; }
+
+    .book-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+.book-card {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.book-image {
+  height: 340px;
+  flex: 0 0 340px;
+  min-height: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 20px;
+  background: #e9eef0;
+}
+
+.book-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  object-fit: contain;
+}
+
+.book-body {
+  flex: 1;
+  padding: 23px;
+  background: white;
+}
+
+    .book-body { padding: 23px; }
+    .book-body h3 { color: var(--navy); margin: 0 0 10px; }
+    .book-body p { margin: 7px 0; color: var(--muted); font-size: .92rem; }
+
+    .publication-list {
+      display: grid;
+      gap: 12px;
+    }
+
+    .publication { padding: 20px 23px; }
+    .publication h3 { color: var(--navy); font-size: 1.02rem; margin: 0 0 5px; }
+    .publication p { margin: 4px 0 0; color: var(--muted); font-size: .89rem; }
+    .publication .authors { color: var(--teal); font-weight: 650; }
+
+    .review-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+    }
+
+    .review-card { padding: 22px; }
+    .review-card h3 { margin: 0 0 12px; color: var(--navy); font-size: 1.05rem; }
+    .review-card ul { margin: 0; padding-left: 20px; color: var(--muted); font-size: .91rem; }
+    .review-card li + li { margin-top: 9px; }
+
+    .contact {
+      background: var(--navy-deep);
+      color: white;
+      text-align: center;
+    }
+
+    .contact .section-heading { margin-inline: auto; }
+    .contact .section-heading h2 { color: white; }
+    .contact .section-heading > p:last-child { color: #c5d6dc; }
+
+    footer {
+      background: #081624;
+      color: #b8c7ce;
+      padding: 25px 0;
+      font-size: .85rem;
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    footer a { color: #d6e9e9; }
+
+    @media (max-width: 950px) {
+      .header-inner {
+        align-items: flex-start;
+        flex-direction: column;
+        padding-block: 12px;
+      }
+
+      section[id], article[id] { scroll-margin-top: 150px; }
+    }
+
+    @media (max-width: 700px) {
+      .hero-inner,
+      .intro-grid,
+      .book-grid,
+      .review-grid,
+      .profile-panel {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-inner { padding-block: 48px; gap: 30px; }
+      .hero-photo { justify-self: start; width: 220px; }
+      .profile-panel { padding: 23px; }
+      .profile-panel figure { margin: 0; }
+      .profile-image { width: min(200px, 100%); }
+      .profile-caption { text-align: left; }
+      .timeline-item { grid-template-columns: 1fr; gap: 3px; }
+      .section { padding-block: 56px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+    }
+  </style>
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="site-name" href="#home">Dr Chan Kwok Wai Keith</a>
+
+      <nav aria-label="Main navigation">
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#profile">Profile</a></li>
+          <li><a href="#appointments">Appointments</a></li>
+          <li><a href="#books">Books</a></li>
+          <li><a href="#publications">Publications</a></li>
+          <li><a href="#reviewing">Reviewing</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section id="home" class="hero">
+      <div class="container hero-inner">
+        <div>
+          <p class="eyebrow">Professional profile · Hong Kong</p>
+          <h1>Dr Keith KW Chan </br>陳國維醫生 </h1>
+
+          <p class="hero-subtitle">
+            Family Medicine · Musculoskeletal Medicine · AI · Medical Education
+          </p>
+
+          <p class="hero-credentials">
+            MBBS(HK) · MMPhysMed (Mu.sk)(Syd) ·  FHKAM (Family Medicine) <br>FRCGP · FRACGP · FHKCFP · MCGP(Irel) ·
+            DFM(CUHK)
+          </p>
+
+          <p class="hero-roles">
+            Adjunct Associate Professor, CUHK · Honorary Clinical Associate
+            Professor in Family Medicine, HKU
+          </p>
+
+          <div class="hero-actions">
+            <a class="button" href="#profile">View profile</a>
+            <a class="button button-outline" href="#publications">
+              Explore publications
+            </a>
+          </div>
+        </div>
+
+        <img
+          class="hero-photo"
+          src="./dr-chan-photo.jpg"
+          alt="Portrait of Dr Chan Kwok Wai Keith">
+      </div>
+    </section>
+
+    <section id="about" class="section section-white">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Introduction</p>
+          <h2>About Dr Chan</h2>
+        </div>
+
+        <div class="intro-grid">
+          <div>
+            <p>
+              Dr Chan’s work spans family medicine, musculoskeletal medicine,
+              medical education, clinical teaching, research, and AI
+              applications for health professionals.
+            </p>
+            <p>
+              His qualifications include degrees from the University of Hong Kong
+              and the University of Sydney, alongside professional qualifications
+              from colleges in Hong Kong, Australia, the United Kingdom, and
+              Ireland. He retired from clinical work in 2021 and continues to teach and research
+              into AI for doctors.
+            </p>
+          </div>
+
+          <aside class="fact-box" aria-label="Areas of work">
+            <h3>Areas of work</h3>
+            <ul>
+              <li>Family medicine and primary care</li>
+              <li>Musculoskeletal medicine</li>
+              <li>Undergraduate and postgraduate education</li>
+              <li>AI applications in healthcare</li>
+            </ul>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section id="profile" class="section">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Profile</p>
+          <h2>Professional Focus</h2>
+          <p>
+            Three connected areas of professional service, teaching,
+            and development.
+          </p>
+        </div>
+
+        <div class="profile-stack">
+          <article id="family-medicine" class="profile-panel">
+            <div>
+              <h3>Family Medicine</h3>
+
+              <p>
+                Dr Chan has contributed to the development of family medicine
+                through clinical supervision, examinations, quality assurance,
+                postgraduate education, and teaching across Hong Kong and
+                the region.
+              </p>
+
+              <h4>Service to The Hong Kong College of Family Physicians</h4>
+              <ul>
+                <li>College Supervisor and Mentor, 1986–2024.</li>
+                <li>
+                  Member of the organizing committee for the WONCA
+                  Asia Pacific Regional Conference 1987.
+                </li>
+                <li>Censor, 2006–2009.</li>
+                <li>
+                  Examiner for the conjoint RACGP/HKCGP fellowship examination,
+                  1988–2024.
+                </li>
+                <li>
+                  Chairman of the Quality Assurance and Accreditation Committee,
+                  1998–2004.
+                </li>
+                <li>
+                  Assessor for the FHKAM (FM) Exit Examination from 1998 onward.
+                </li>
+              </ul>
+
+              <h4>Regional education and development</h4>
+              <p>
+                Dr Chan’s contributions include participation in establishing
+                the RACGP/HKCFP conjoint examination; introducing CPD, a continuing
+                professional development component to the College’s quality
+                assurance programme; and developing reciprocal recognition of
+                that programme with the The Royal Australian College of General Practitioners.
+              </p>
+              <p>
+                He also established an Assessment Enhancement course for family medicine trainees, edited a textbook
+                <em>Problem-Based Approach to Family Medicine</em>, and
+                introduced a Diploma in Family Medicine course to Macau. He
+                has participated in family medicine education in Hong Kong,
+                Macau, and mainland China, including teaching doctors in
+                Shenzhen and Beijing.
+              </p>
+            </div>
+
+            <figure>
+              <img
+                class="profile-image"
+                src="./logo-hkcfp.jpg"
+                alt="Hong Kong College of Family Physicians logo"
+                loading="lazy">
+              <figcaption class="profile-caption">
+                Hong Kong College of Family Physicians
+              </figcaption>
+            </figure>
+          </article>
+
+          <article id="musculoskeletal-medicine" class="profile-panel">
+            <div>
+              <h3>Musculoskeletal Medicine</h3>
+
+              <p>
+                Dr Chan developed an interest in musculoskeletal problems
+                while practising family medicine in primary care. He
+                completed a Graduate Diploma in Physical Medicine
+                (Musculoskeletal) at the University of Sydney in 1998,
+                then established a clinic in Tsuen Wan where he introduced
+                the approaches he had studied. Over the following years,
+                he continued his training through courses, workshops, and
+                conferences in Europe, North America, Australia, and
+                New Zealand. In 2001, he completed a Master’s degree in
+                Physical Medicine (Musculoskeletal) at the University
+                of Sydney.
+              </p>
+
+              <p>
+                In 2004, the Medical Council of
+                Hong Kong recognized his Sydney master’s qualification as
+                a quotable degree. Dr Chan subsequently focused on
+                sharing his musculoskeletal medicine knowledge and skills among
+                colleagues. In July 2005, he founded the Hong Kong
+                Institute of Musculoskeletal Medicine (HKIMM) and served
+                as its founding president.
+              </p>
+
+              <h4>Training and professional development</h4>
+              <p>
+                HKIMM organized regular lectures and workshops to develop
+                education in musculoskeletal medicine. In 2010, it introduced
+                the Certificate Course of Practical Musculoskeletal Medicine
+                (CPMM), with 18 doctors in its first cohort. Some participants
+                later passed the Institute’s fellowship examination and became
+                examiners themselves.
+              </p>
+
+              <p>
+                In 2011, HKIMM was invited to join the International Federation
+                of Manual/Musculoskeletal Medicine (FIMM). The CPMM course
+                continued through 2024 and was upgraded to a diploma course
+                in 2025.
+              </p>
+
+              <h4>Fellowship</h4>
+              <p>
+                HKIMM also established a fellowship examination to assess
+                knowledge and clinical skills and to encourage continuing
+                professional development. In a recent fellowship examination held in August 2026,
+                13 doctors from Hong Kong, Indonesia, Malaysia, and Singapore
+                passed the examination and became fellow of the Institute.
+              </p>
+            </div>
+
+            <figure>
+              <img
+                class="profile-image"
+                src="./logo-hkimm.jpg"
+                alt="Hong Kong Institute of Musculoskeletal Medicine logo"
+                loading="lazy">
+              <figcaption class="profile-caption">
+                Hong Kong Institute of Musculoskeletal Medicine
+              </figcaption>
+            </figure>
+          </article>
+
+          <article id="ai-education" class="profile-panel">
+            <div>
+              <h3>AI &amp; Medical Education</h3>
+
+              <p>
+                Following his retirement from clinical work in 2021,
+                Dr Chan continued teaching family medicine and
+                musculoskeletal medicine to medical students and
+                postgraduate trainees.
+              </p>
+
+              <p>
+                Dr Chan has had a longstanding interest in programming.
+                He wrote DOS-based clinic software using Clipper
+                Summer ’87 in 1987 and later developed a Windows-based
+                Clinic Automation System by Healthindices (CASH),
+                using Borland Delphi 7 in 2002.
+              </p>
+
+              <p>
+                As artificial intelligence developed rapidly in the
+                early 2020s, he began exploring how doctors could embrace
+                AI to improve productivity while protecting patient
+                confidentiality.
+              </p>
+
+              <p>
+                His current educational interests include organizing
+                AI workshops for health professionals and developing
+                a locally hosted AI tool intended for doctors.
+              </p>
+            </div>
+
+            <figure>
+              <img
+                class="profile-image"
+                src="./logo-ai.png"
+                alt="AI-themed icon"
+                loading="lazy">
+              <figcaption class="profile-caption">
+                AI &amp; Medical Education
+              </figcaption>
+            </figure>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="appointments" class="section section-white">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Professional service</p>
+          <h2>Appointments &amp; Membership Roles</h2>
+        </div>
+
+        <div class="timeline">
+          <article class="timeline-item">
+            <div class="timeline-year">1988–2024</div>
+            <div>
+              <h3>Examiner, conjoint RACGP/HKCGP fellowship examination</h3>
+              <p>The Hong Kong College of Family Physicians</p>
+            </div>
+          </article>
+
+          <article class="timeline-item">
+            <div class="timeline-year">1998–2004</div>
+            <div>
+              <h3>Chairman, Quality Assurance and Accreditation Committee</h3>
+              <p>The Hong Kong College of Family Physicians</p>
+            </div>
+          </article>
+
+          <article class="timeline-item">
+            <div class="timeline-year">1998–present</div>
+            <div>
+              <h3>Assessor, FHKAM (FM) Exit Examination</h3>
+              <p>The Hong Kong College of Family Physicians</p>
+            </div>
+          </article>
+
+          <article class="timeline-item">
+            <div class="timeline-year">1999–2004</div>
+            <div>
+              <h3>Honorary Adjunct Clinical Professor</h3>
+              <p>Department of Community &amp; Family Medicine, CUHK</p>
+            </div>
+          </article>
+
+          <article class="timeline-item">
+            <div class="timeline-year">2004–present</div>
+            <div>
+              <h3>Adjunct Associate Professor</h3>
+              <p>
+                Jockey Club School of Public Health and Primary Care,
+                Faculty of Medicine, CUHK
+              </p>
+            </div>
+          </article>
+
+          <article class="timeline-item">
+            <div class="timeline-year">From 2005</div>
+            <div>
+              <h3>Founding President</h3>
+              <p>The Hong Kong Institute of Musculoskeletal Medicine</p>
+            </div>
+          </article>
+
+          <article class="timeline-item">
+            <div class="timeline-year">2006–2009</div>
+            <div>
+              <h3>Censor</h3>
+              <p>The Hong Kong College of Family Physicians</p>
+            </div>
+          </article>
+
+          <article class="timeline-item">
+            <div class="timeline-year">2008–2009</div>
+            <div>
+              <h3>Director of Postgraduate Programme in Family Medicine</h3>
+              <p>
+                School of Public Health and Department of Community
+                and Family Medicine, CUHK
+              </p>
+            </div>
+          </article>
+
+          <article class="timeline-item">
+            <div class="timeline-year">2017–present</div>
+            <div>
+              <h3>Censor</h3>
+              <p>The Hong Kong Institute of Musculoskeletal Medicine</p>
+            </div>
+          </article>
+
+          <article class="timeline-item">
+            <div class="timeline-year">2022–present</div>
+            <div>
+              <h3>Honorary Clinical Associate Professor</h3>
+              <p>
+                Department of Family Medicine and Primary Care,
+                The University of Hong Kong
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="books" class="section">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Books</p>
+          <h2>Book Publications</h2>
+        </div>
+
+        <div class="book-grid">
+          <article class="book-card">
+            <div class="book-image">
+              <img
+                loading="lazy"
+                src="./book-principle-of-oa.jpg"
+                alt="Cover of Principles of Osteoarthritis">
+            </div>
+            <div class="book-body">
+              <h3>Principles of Osteoarthritis</h3>
+              <p>
+                Chapter 2: Symptoms, Signs and Quality of Life (QoL)
+                in Osteoarthritis
+              </p>
+              <p>
+                <strong>Chapter authors:</strong>
+                Keith KW Chan and Ricky WK Wu
+              </p>
+              <p><strong>Book editor:</strong> Bruce M. Rothschild</p>
+              <p>ISBN as listed in the supplied CV: 908-953-51-0063-8</p>
+            </div>
+          </article>
+
+          <article class="book-card">
+            <div class="book-image">
+              <img
+                loading="lazy"
+                src="./book-pbl-family-medicine.jpg"
+                alt="Cover of Problem-Based Approach to Family Medicine">
+            </div>
+            <div class="book-body">
+              <h3>Problem-Based Approach to Family Medicine</h3>
+              <p><strong>Editor:</strong> Keith KW Chan</p>
+              <p>The Hong Kong College of Family Physicians</p>
+              <p>ISBN 978-9-812-72405-2</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="publications" class="section section-white">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Scholarship</p>
+          <h2>Journal &amp; Other Publications</h2>
+          <p>
+            Bibliographic details are based on the supplied CV and
+            should be checked before formal academic use.
+          </p>
+        </div>
+
+        <div class="publication-list">
+          <article class="publication">
+            <h3>A Proposed Record Folder for General Practice</h3>
+            <p class="authors">Chan KW</p>
+            <p>The Hong Kong Practitioner. 1987;9:2412–2416.</p>
+          </article>
+
+          <article class="publication">
+            <h3>General Practice; Quo Vadis?</h3>
+            <p class="authors">Chan KW</p>
+            <p>The Hong Kong Practitioner. 1987;9:2859–2870.</p>
+          </article>
+
+          <article class="publication">
+            <h3>Quality Assurance</h3>
+            <p class="authors">Chan KW</p>
+            <p>The Hong Kong Practitioner. 2000;22:21–24.</p>
+          </article>
+
+          <article class="publication">
+            <h3>Quality Assurance</h3>
+            <p class="authors">Chan KW</p>
+            <p>WONCA News. June 2000.</p>
+          </article>
+
+          <article class="publication">
+            <h3>
+              Continuous Professional Development (CPD):
+              the link with quality
+            </h3>
+            <p class="authors">Chan KW</p>
+            <p>The Hong Kong Practitioner. 2001;23:298–300.</p>
+          </article>
+
+          <article class="publication">
+            <h3>
+              Communication Skill of Experienced General Practitioners:
+              Is There Room for Improvement and How Much Can It Be Improved?
+            </h3>
+            <p class="authors">Cynthia Chan, Chan KW, et al.</p>
+            <p>Medical Education. 2003;37:514–526.</p>
+          </article>
+
+          <article class="publication">
+            <h3>Co-morbidities of patients with knee osteoarthritis</h3>
+            <p class="authors">Keith KW Chan, et al.</p>
+            <p>Hong Kong Medical Journal. 2009;15:31–38.</p>
+          </article>
+
+          <article class="publication">
+            <h3>
+              Recommendations for the use of Paracetamol
+              in Acute and Chronic Pain
+            </h3>
+            <p class="authors">
+              The Multidisciplinary Panel on Acute and Chronic Pain
+            </p>
+            <p>Medical Progress. 2010;37(17):578–583.</p>
+          </article>
+
+          <article class="publication">
+            <h3>Musculoskeletal Medicine in Family Practice</h3>
+            <p class="authors">Keith KW Chan · Editorial</p>
+            <p>
+              The Hong Kong Practitioner. June 2010;
+              volume 12:1–2, as listed in the supplied CV.
+            </p>
+          </article>
+
+          <article class="publication">
+            <h3>
+              A qualitative study on patients with knee osteoarthritis
+              to evaluate the influence of different pain patterns on
+              patients’ quality of life and to find out patients’
+              interpretation and coping strategies for the disease
+            </h3>
+            <p class="authors">Keith KW Chan and Loretta WY Chan</p>
+            <p>Rheumatology Reports. 2011;3:e3.</p>
+          </article>
+
+          <article class="publication">
+            <h3>
+              Symptoms, Signs and Quality of Life (QoL)
+              in Osteoarthritis
+            </h3>
+            <p class="authors">Keith KW Chan and Ricky WK Wu</p>
+            <p>
+              Book chapter listed in the CV under Osteoarthritis / Book 1.
+              ISBN 979-953-307-082-6.
+            </p>
+          </article>
+
+          <article class="publication">
+            <h3>Snapping elbow syndrome: a report of two cases</h3>
+            <p class="authors">Keith KW Chan and Ricky WK Wu</p>
+            <p>HK Practitioner. 2011;33:159–168.</p>
+          </article>
+
+          <article class="publication">
+            <h3>
+              Clinical, Radiological and Ultrasonographic Findings
+              related to Knee Pain in Osteoarthritis
+            </h3>
+            <p class="authors">
+              Keith KW Chan, Regina WS Sit, Ricky WK Wu
+              and Allen HY Ngai
+            </p>
+            <p>PLoS ONE. 2014;9(3):e92901. PMCID: PMC3968041.</p>
+          </article>
+
+          <article class="publication">
+            <h3>
+              Hypertonic dextrose prolotherapy in the treatment
+              of symptomatic knee osteoarthritis:
+              systematic review and meta-analysis
+            </h3>
+            <p class="authors">
+              Regina WS Sit, Vincent CH Chung, Kenneth D Reeves,
+              David Rabago, Keith KW Chan, Dicken CC Chan,
+              Xinyin Wu, Robin ST Ho and Samuel YS Wong
+            </p>
+            <p>
+              PROSPERO International Prospective Register of Systematic Reviews;
+              Centre for Reviews and Dissemination, University of York.
+            </p>
+          </article>
+
+          <article class="publication">
+            <h3>
+              Clinical effectiveness of patella mobilisation therapy
+              versus a waiting list control for knee osteoarthritis:
+              a protocol for a pragmatic randomised clinical trial
+            </h3>
+            <p class="authors">
+              Regina WS Sit, Keith KW Chan, Benjamin HK Yip, et al.
+            </p>
+            <p>
+              BMJ Open. 2018;8(3):e019103.
+              doi: 10.1136/bmjopen-2017-019103.
+            </p>
+          </article>
+
+          <article class="publication">
+            <h3>
+              Clinic-Based Patellar Mobilization Therapy
+              for Knee Osteoarthritis: A Randomized Clinical Trial
+            </h3>
+            <p class="authors">
+              Regina WS Sit, Keith KW Chan, Dan Zou, et al.
+            </p>
+            <p>
+              Annals of Family Medicine. 2018;16(6):521–529.
+              doi: 10.1370/afm.2320.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="reviewing" class="section">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Peer review &amp; related work</p>
+          <h2>Reviewer Activities</h2>
+          <p>
+            Dates and manuscript descriptions are based on the supplied CV.
+          </p>
+        </div>
+
+        <div class="review-grid">
+          <article class="review-card">
+            <h3>The Hong Kong Practitioner</h3>
+            <ul>
+              <li>
+                2009-11-28 — Prevalence of MSK among GOPD doctors
+                using display screen equipment
+              </li>
+              <li>
+                2010-08-22 — Use of Ottawa Ankle Rules to assess
+                ankle injuries
+              </li>
+              <li>
+                2011-08-22 — Evidence-based guideline on management
+                of low back pain in working populations in primary care
+              </li>
+              <li>
+                2012-07-18 — Needle fasciotomy in Dupuytren’s disease
+              </li>
+            </ul>
+          </article>
+
+          <article class="review-card">
+            <h3>Journal of Rehabilitation Research &amp; Development</h3>
+            <ul>
+              <li>
+                2009-08-31 — Neurophysiological framework for managing
+                pain and physical dysfunction in early knee osteoarthritis
+              </li>
+            </ul>
+          </article>
+
+          <article class="review-card">
+            <h3>Journal of Physical Education and Sport Management</h3>
+            <ul>
+              <li>
+                2011-02-09 — Manuscript on anxiety, fear, obsession,
+                health concern, and sports management
+              </li>
+            </ul>
+          </article>
+
+          <article class="review-card">
+            <h3>TransPerfect</h3>
+            <ul>
+              <li>
+                2011 — Translation validation for the Childhood
+                Asthma Control Test for children aged 4–11
+              </li>
+            </ul>
+          </article>
+
+          <article class="review-card">
+            <h3>BioMed Central</h3>
+            <ul>
+              <li>
+                2012-08-04 — Qualitative study on prevention
+                of knee pain in symptomless older adults
+              </li>
+            </ul>
+          </article>
+
+          <article class="review-card">
+            <h3>Disability and Rehabilitation</h3>
+            <ul>
+              <li>
+                2012-08-13 — Living with knee osteoarthritis:
+                illness and treatment beliefs
+              </li>
+              <li>
+                2013-03-13 — Systematic review of musculoskeletal,
+                back, and low-back pain in people with spinal cord injury
+              </li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section contact">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow" style="color:#a9e1dd">Contact</p>
+          <h2>Get in Touch</h2>
+          <p>For professional enquiries, find Dr Chan on Instagram.</p>
+        </div>
+
+        <a
+          class="button"
+          href="https://www.instagram.com/KeithKW75/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Visit KeithKW75 on Instagram (opens in a new tab)">
+          Instagram: @KeithKW75 ↗
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <span>
+        © <span id="year">2026</span> Dr Chan Kwok Wai Keith
+      </span>
+      <span><a href="#home">Back to top ↑</a></span>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+  </script>
+</body>
+</html>
